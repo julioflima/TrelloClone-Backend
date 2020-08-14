@@ -1,6 +1,6 @@
 const generateUniqueId = require('../utils/generateUniqueId');
 const connection = require('../database/connection');
-
+// lalala
 module.exports = {
   async index(request, response) {
     const lists = await connection('lists').select('*');
