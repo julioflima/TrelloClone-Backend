@@ -39,14 +39,21 @@ module.exports = {
     const { title, description, label } = request.body;
     const lists_id = request.headers.authorization;
 
-    const [id] = await connection('todos').insert({
-      title,
-      description,
-      label,
-      lists_id,
-    });
-
+    try{
+      const [id] = await connection('todos').insert({
+        title,
+        description,
+        label,
+        lists_id,
+      });
     return response.json({ id });
+
+    }
+    catch(err){
+      console.log(err);
+    }
+    
+
   },
 
   async delete(request, response) {
