@@ -11,7 +11,7 @@ module.exports = {
   },
 
   testing: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
       host: 'ec2-34-238-26-109.compute-1.amazonaws.com',
       user: 'woasmttsxtcklw',
@@ -26,7 +26,7 @@ module.exports = {
   },
 
   production: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
       host: 'ec2-34-238-26-109.compute-1.amazonaws.com',
       user: 'woasmttsxtcklw',
