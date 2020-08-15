@@ -1,11 +1,8 @@
-// Update with your config settings.
-
 module.exports = {
-
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './src/database/db.sqlite'
+      filename: './src/database/db.sqlite',
     },
     migrations: {
       directory: './src/database/migrations',
@@ -13,48 +10,31 @@ module.exports = {
     useNullAsDefault: true,
   },
 
-  test: {
-    client: 'sqlite3',
+  testing: {
+    client: 'pg',
     connection: {
-      filename: './src/database/test.sqlite'
+      host: 'ec2-34-238-26-109.compute-1.amazonaws.com',
+      user: 'woasmttsxtcklw',
+      password: '261283040e6c3ab2ab8946617497a53222d8de1cbf8510e36a6d449166a3fdb9',
+      database: 'd89ukt02te152r',
     },
     migrations: {
       directory: './src/database/migrations',
     },
-    useNullAsDefault: true,
-  },
-
-
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user: 'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
+    seeds: { directory: './database/seeds' },
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
-      database: 'my_db',
-      user: 'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
+      host: 'ec2-34-238-26-109.compute-1.amazonaws.com',
+      user: 'woasmttsxtcklw',
+      password: '261283040e6c3ab2ab8946617497a53222d8de1cbf8510e36a6d449166a3fdb9',
+      database: 'd89ukt02te152r',
     },
     migrations: {
-      tableName: 'knex_migrations'
-    }
-  }
-
+      directory: './src/database/migrations',
+    },
+    seeds: { directory: './database/seeds' },
+  },
 };
