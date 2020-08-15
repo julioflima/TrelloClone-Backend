@@ -21,6 +21,7 @@ module.exports = {
     migrations: {
       directory: './src/database/migrations',
     },
+    useNullAsDefault: true,
     seeds: { directory: './database/seeds' },
   },
 
