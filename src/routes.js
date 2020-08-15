@@ -19,7 +19,7 @@ routes.post(
 );
 
 routes.delete(
-  '/lists/:id',
+  '/lists',
   celebrate({
     [Segments.HEADERS]: Joi.object({
       authorization: Joi.string().required(),
